@@ -1,0 +1,41 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!--   <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+    {% seo %}
+  </head>
+  <body>
+
+    <header>
+      <a href="{{site.baseurl}}/"><div class="home"></div></a>
+    </header>
+
+    <main>
+      <article>
+        {{ content }}
+      </article>
+    </main>
+
+    <footer>
+      <span class="copy"><small>© {{site.title}} <span class="js-current-year"></span></small></span>
+      <!-- <span class="vat"><small>Ondernemingsnummer BE 0691878927</small></span> -->
+    </footer>
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- GOOGLE ANALYTICS -->
+    {% include analytics.html %}
+
+    <!-- THEME JAVASCRIPT -->
+    <script async src="{{site.baseurl}}/js/theme.js"></script>
+
+  </body>
+</html>
